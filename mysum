@@ -1,0 +1,6 @@
+def mysum(*numbers): # 加星號就是不管傳入幾個參數都當作一個，否則你傳一個以上它就會報錯
+  sum = 0
+  for i in numbers:
+    sum = sum + i
+  return sum # 把sum的值回傳給函數mysum
+print(mysum(2,5.5,7.5)) # 呼叫函數並傳入n個參數
