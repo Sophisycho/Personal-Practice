@@ -3,14 +3,20 @@ target = random.randint(0, 100)
 
 while True: # 進入無限迴圈
   num = input('請輸入數字:') # input輸入的會是字串型態
-  print('你輸入的數字是:', num)
-  if int(num) < target: # 所以這邊必須強制轉型
-    print('再猜大一點')
+  if num.isdigit(): # .isdigit()方法確保使用者輸入的是數字，返回值True、False，但是缺點是這個方法會把小數點視為句點。
+    usernum = int(num)
+    print('你輸入的數字是:', num)
+    if int(usernum) < target: # 所以這邊必須強制轉型
+      print('再猜大一點')
     
-  elif int(num) > target:
-    print('再猜小一點')
-  else:
-    print('猜中了')
-    break
+    elif int(usernum) > target:
+      print('再猜小一點')
+    else:
+      print('猜中了')
+      break
+  
+# 延伸問題：如果使用者輸入浮點數怎麼比大小？
+  
+  
   
   
