@@ -1,0 +1,22 @@
+def runtime():
+  total = 0.0
+  number_run = 0
+  while True:
+    runtime = input('請輸入時間:') # input輸入的東西會是字串型態
+    if runtime == '': # 收到空字串(使用者直接打enter)，就直接break。
+      break
+    try: # 攔截字串轉數值可能發生的錯誤，例如使用者輸入20e
+      runtimefloat = float(runtime) # 將字串轉為float
+      total += runtimefloat
+      number_run += 1
+    except Exception as error:
+      print('你的錯誤如下:',error)
+
+  
+  avg_time = (total/number_run)
+  print('跑:',number_run,'次','平均',avg_time,'秒')
+
+
+
+
+runtime()
