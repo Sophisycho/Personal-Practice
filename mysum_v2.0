@@ -1,0 +1,6 @@
+def mysum(*numbers,start): # 加星號就是不管傳入幾個參數都當作一個，否則你傳一個以上它就會報錯，加入另一個參數start當作起始值
+  sum = 0
+  for i in numbers:
+    sum = sum + i
+  return sum + start # 把sum的值回傳給函數mysum，且會加總start
+print(mysum(2,5.5,7.5,start=10)) # 呼叫函數並傳入n個參數，這邊必須指名start等於多少
